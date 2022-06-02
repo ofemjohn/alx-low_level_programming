@@ -1,16 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ *main - returns 0
  *
- * Description: This ia a main function
  *
- * Return: Always return (0);
- */
-int main(void);
+ *
+ *Description - main returns 0
+ *
+ *puts - Writes string and newline to stdout
+ *
+ *Return: 0
+ *
+ **/
+
+int main(void)
+
 {
 
-puts("\"Programming is like building a multilingual puzzle")
-return (0);
+	puts("\"Programming is like building a multilingual puzzle");
+
+	return (0);
 
 }
