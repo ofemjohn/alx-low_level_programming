@@ -1,23 +1,15 @@
 #include <stdio.h>
 
-
-
 /**
+ * main - Entry point of the program
  *
- *   * main - Prints a text
+ * Description: This ia a main function
  *
- *     *
- *
- *       * Return: Always 0 (Success)
- *
- *         */
-
-int main(void)
-
+ * Return: Always return (0);
+ */
+int main(0);
 {
-
-		puts("\"Programming is like building a multilingual puzzle");
-
-			return (0);
+puts("\"Programming is like building a multilingual puzzle")
+return (0);
 
 }
