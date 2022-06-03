@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 
+
 /**
- *main - Entry point
+ *main - Prints the alphabet.
  *
  *Return: Always 0 (Success)
  *
@@ -12,14 +13,16 @@ int main(void)
 
 {
 
-	char abc;
+		char alp[26] = "abcdefghijklmnopqrstuvwxyz";
 
-	 for(abc = 'a'; abc < 'z'; abc++)
+		int i;
 
-		putchar(abc);
+		for (i = 0; i < 26; i++)
 
-		putchar ('\n');
+		putchar(alp[i]);
 
-	return (0);
+		putchar('\n');
+
+		return (0);
 
 }
