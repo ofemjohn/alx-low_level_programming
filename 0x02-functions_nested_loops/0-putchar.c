@@ -1,18 +1,17 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
- * main - prints _putchar, followed by a new line.
+ *main - print _putchar as a message
  *
- * retur: 0 (Always)
+ * return 0 (Always)
  *
  */
 
-int main(void)
+int _putchar(char c)
+
+
 {
-
-	_putchar("\n");
-	
-
-	return (0);
+	return (write(1, &c, 1));
 
 }
