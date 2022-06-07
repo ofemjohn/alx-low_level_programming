@@ -11,9 +11,9 @@ void print_alphabet_x10(void)
 {
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int counter;
-	int x;
+	int X;
 
-	while (x < 10)
+	while (X < 10)
 	{
 		for (counter = 0; counter < 26; counter++)
 		{
