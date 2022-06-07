@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- *main - prints _putchar
+ * main -program that prints Holberton
  *
- * rturn 0 (always)
+ * Return: 0
  *
  */
-
 int main(void)
 {
 	_putchar('_');
