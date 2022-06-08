@@ -31,7 +31,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar((tmp / 10) + '0');
-				_putchar((tmp % 10) + '0')
+				_putchar((tmp % 10) + '0');
 			}
 			else
 			{
