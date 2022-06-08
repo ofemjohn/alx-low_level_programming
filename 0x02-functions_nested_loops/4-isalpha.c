@@ -2,11 +2,9 @@
 
 
 /**
- * _isiialpha - check charachter.
- *
- * @c: charachter
- *
- * Return: Always 0.
+ * _isalpha - checks for alphabetic character.
+ * _isalpha
+ * retun 0 (always).
  */
 
 int _isalpha(int c)
