@@ -1,41 +1,50 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - first 50 fibonatchi.
+ * main - Prints the first 98 Fibonacci numbers
  *
- * Return: void.
- *
+ * Return: Always 0.
  */
 int main(void)
 {
-	int i;
-	long a = 1, b = 2, 
-	long n11, n12, n21, n22, sum1, sum2;
-	long split = 100000000000000000;
+	int c, boolean, boolean2;
+	long int n1, n2, fn, fn2, n11, n22;
 
-	printf("%ld\n%ld\n", a, b);
-	n11 = a / split;
-	n12 = a % split;
-	n21 = b / split;
-	n22 = b % split;
-	for (i = 0; i <= 200; i++)
+	n1 = 1;
+	n2 = 2;
+	boolean =  boolean2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 96; c++)
 	{
-		sum1 = n11 + n21 + ((n12 + n22) / split);
-		sum2 = (n12 + n22) % split;
-		if (sum1 != 0)
-			printf("%ld%ld\n", sum1, sum2);
-
+		if (boolean)
+		{
+			fn = n1 + n2;
+			printf(", %ld", fn);
+			n1 = n2;
+			n2 = fn;
+		}
 		else
 		{
-			printf("%ld\n", sum2);
+			if (boolean2)
+			{
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				boolean2 = 0;
+			}
+			fn2 = (n11 + n22);
+			fn = n1 + n2 + (fn2 / 1000000000);
+			printf(", %ld", fn);
+			printf("%ld", fn2 % 1000000000);
+			n1 = n2;
+			n11 = n22;
+			n2 = fn;
+			n22 = (fn2 % 1000000000);
 		}
-
-			n11 = n21;
-			n12 = n22;
-			n21 = sum1;
-			n22 = sum2;
+		if (((n1 + n2) < 0) && boolean == 1)
+			boolean = 0;
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
