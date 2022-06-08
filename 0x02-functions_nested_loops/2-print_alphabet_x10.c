@@ -9,22 +9,16 @@
 
 void print_alphabet_x10(void)
 {
-	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-	int counter;
-	int x;
+	char c;
+	int i;
 
-	while (x <= 10)
+	for (i = 1; i <= 10; i++)
 	{
-	for (counter = 0; counter <= 26; counter++)
+		for (c = 'a'; c <= 'z'; c++)
 		{
-			_putchar(alphabet[counter]);
-
+			_putchar(c);
 		}
-
 		_putchar('\n');
-		x++;
-
 	}
-
 }
 
