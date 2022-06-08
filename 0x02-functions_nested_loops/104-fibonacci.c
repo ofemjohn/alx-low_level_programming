@@ -10,11 +10,11 @@
 int main(void)
 {
 	int i;
-	long long a = 1, b = 2, c;
-	long long n11, n12, n21, n22, sum1, sum2;
-	long long split = 100000000000000000;
+	long a = 1, b = 2, c;
+	long n11, n12, n21, n22, sum1, sum2;
+	long split = 100000000000000000;
 
-	printf("%lld\n%lld\n", a, b);
+	printf("%ld\n%ld\n", a, b);
 	n11 = a / split;
 	n12 = a % split;
 	n21 = b / split;
@@ -24,9 +24,9 @@ int main(void)
 		sum1 = n11 + n21 + ((n12 + n22) / split);
 		sum2 = (n12 + n22) % split;
 		if (sum1 != 0)
-			printf("%lld%lld\n", sum1, sum2);
+			printf("%ld%ld\n", sum1, sum2);
 		else
-			printf("%lld\n", sum2);
+			printf("%ld\n", sum2);
 
 			n11 = n21;
 			n12 = n22;
