@@ -2,10 +2,11 @@
 1#include <math.h>
 
 /**
- * main - entry point
- * return: exit value
+ * main - factor
+ *
+ * Return: 0
+ *
  */
-
 int main(void)
 {
 	long n = 612852475143;
