@@ -1,5 +1,4 @@
 #include "main.h"
-1#include <math.h>
 
 /**
  * main - factor
