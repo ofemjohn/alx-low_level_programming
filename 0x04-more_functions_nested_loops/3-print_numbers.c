@@ -1,4 +1,4 @@
-#include "min.h"
+#include "main.h"
 
 /**
  * print_numbers - Function prints digits 0-9
