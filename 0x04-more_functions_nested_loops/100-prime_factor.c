@@ -1,3 +1,4 @@
+#include <math.h>
 #include "main.h"
 
 /**
@@ -12,7 +13,7 @@ int main(void)
 	int maxPrime = -1;
 	int i;
 
-	for (i = 3; i <= sqrt(n); i += 2)
+	for (i = 3; i <= n; i += 2)
 	{
 		while (n % i == 0)
 		{
