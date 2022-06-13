@@ -9,38 +9,50 @@
 
 int _atoi(char *s)
 {
-	int value = 0;
-
+	int i = 0;
 	int j = 0;
-
-	int isnum = 0;
-
+	int k = 0;
 	int sign = 1;
+	int stop_sign = 0;
+	int stop_num = 0;
+	int ent_num = 0;
+	char number_in_array[100];
 
-	for (; s[j]; j++)
+	while (*(s + i) != '\0')
 	{
-		if (s[j] == '-')
+		if (*(s + i) == '+' && stop_sign == 0)
+			sign *= 1;
+		else if (*(s + i) == '-' && stop_sign == 0)
 			sign *= -1;
-		if (s[j] >= '0' && s[j] <= '9')
+		if (*(s + i) >= '0' && *(s + i) <= '9' && stop_num == 0)
+
 		{
-			if (sign < 1)
+			if (*(s + i) == '+' && stop_sign == 0)
+				sign *= 1;
+			else if (*(s + i) == '-' && stop_sign == 0)
+				sign *= -1;
+			if (*(s + i) >= '0' && *(s + i) <= '9' && stop_num == 0)
+		}
+		else
+		{
+			if (ent_num == 1)
+				stop_num = 1;
+			else
 			{
-				isnum = 1;
-				value *= 10;
-				value += -(s[j] - '0');
-				continue;
+				number_in_array[j] = '0';
+				number_in_array[1] = '\0';
 			}
-
 		}
-		else if (isnum)
-		{
-			j++;
-			break;
-		}
-
+		i++
+	}
+	
+	number_in_array[j] = '0';
+	number_in_array[1] = '\0';
+	{
+		putchar(number_in_array[k]);
+		k++;
 	}
 
-	return (value);
+	return (0);
 
 }
-
