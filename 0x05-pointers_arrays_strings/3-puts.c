@@ -1,17 +1,17 @@
 #include "main.h"
-
 /**
- * main - check the code for Holberton School students.
+ * _puts - prints a string to standard output
+ * @str: is the string
  *
- * Return: Always 0.
+ * Return: is void
  */
-int main(void)
 
+void _puts(char *str)
 {
-	char *str;
-
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	_puts(str);
-
-	return (0);
+	while (*str != 0)
+	{
+		_putchar(*str);
+		&*str++;
+	}
+	_putchar('\n');
 }
