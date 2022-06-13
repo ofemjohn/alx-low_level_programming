@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * reset_to_98 - Reset the variable sent to the function at 98
