@@ -19,7 +19,7 @@ int main(void)
 	 * - you are not allowed to code anything else than this line of code
 	 */
 
-	*(p + 3) = 98;
+	(p + 3) = 98;
 
 	/* ...so that this prints 98\n */
 
