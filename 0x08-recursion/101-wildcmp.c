@@ -1,4 +1,5 @@
-#include "main"
+#include "main.h"
+#include <stdio.h>
 
 /**
  * wildcmp - compares two strings.
