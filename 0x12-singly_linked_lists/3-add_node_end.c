@@ -1,47 +1,41 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
-
+#include "string.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * add_node_end - adds a new node at the beginning of a list_t list.
- * @head: Pointer to the actual position of the linked list (struct)
- * @str: String to allocate as a new element
+ * add_node_end - adds a new node at the end  of a list_t list
+ * @head: pointer to a pointer to a struct
+ * @str: string to be copied
  *
- *Return: Size of the linked_list.
+ * Return: the address of new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	{
-		list_t *new;
-		list_t *last;
-		int i = 0;
+	list_t *prev_node = *head;
+	list_t *new_node;
+	unsigned int i;
 
-		if (head == NULL)
-			return (NULL);
-
-		new = malloc(sizeof(list_t));
-
-		if (new == NULL);
-
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
 
-		new->str = strdup(str);
-		for (i = 0; str[i] != '\0'; i++)
-			;
-		new->len = i;
-		new->next = NULL;
+	i = 0;
+	while (str[i] != '\0')
+		i++;
 
-		if (*head == NULL)
-		{
-			*head = new;
-			return (*head);
-		}
-
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-
-		last->next = new;
-		return (*head);
+	new_node->str = strdup(str);
+	new_node->len = i;
+	new_node->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
 	}
+	else
+	{
+		while (prev_node->next != NULL)
+			prev_node = prev_node->next;
+		prev_node->next = new_node;
+	}
+	return (new_node);
+}
