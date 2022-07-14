@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include "lists.h"
+#include <string.h>
+#include <stdio.h>
 
 /**
  * free_list - frees a list_t list
